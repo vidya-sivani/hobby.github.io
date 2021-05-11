@@ -1,0 +1,148 @@
+/* 
+.background {
+    background-image: url('');
+   
+  }
+  
+ 
+.overlay {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: chartreuse;
+    font-family:  URW Chancery L, cursive, serif;
+    
+    
+  }
+
+  
+
+  .flip-text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family:  URW Chancery L, cursive, serif;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-top: 30px;
+    -ms-grid-row-align: center;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .fc{
+    text-align: center;
+  }
+   */
+
+
+   /* ------------------------------------------------------------- */
+
+   @import url('https://fonts.googleapis.com/css2?family=Share:ital,wght@0,700;1,700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: "Share", sans-serif;
+  font-style: italic;
+  font-size: 9em;
+  background-color: #e0e0e0;
+}
+.container {
+  /* margin: auto; */
+  /* width: 1000px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 15vh;
+}
+
+.panel {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  
+}
+
+.panel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* transition: transform 0.75s; */
+  transform-style: preserve-3d;
+  animation: flip 9s linear forwards infinite;
+  animation-direction: normal;
+}
+
+.panel-front,
+.panel-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.panel-front {
+  background-color: tomato;
+  color: black;
+  justify-content: center;
+}
+
+.panel-back {
+  
+  color: white;
+  transform: rotateY(180deg);
+  /* padding: 5px; */
+}
+
+.panel-front  {
+  width: 300px;
+  height: 300px;
+  text-align:center;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
